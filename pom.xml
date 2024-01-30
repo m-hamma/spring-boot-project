@@ -11,6 +11,11 @@
     <groupId>org.example</groupId>
     <artifactId>SpringBatchExample</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>SharedLibrary</module>
+        <module>AdminApp</module>
+        <module>CustomerApp</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
