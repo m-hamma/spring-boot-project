@@ -9,9 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 import org.example.model.Product;
 
 import java.util.List;
+import java.util.Set;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/products")
 public class ProductController {
 
 	private final ProductService productService;
@@ -20,8 +21,8 @@ public class ProductController {
 		this.productService = productService;
 	}
 
-	@GetMapping(value = "/products")
-	public List<Product> trouverListProduct() {
+	@GetMapping(value = "/")
+	public Set<Product> trouverListProduct() {
 		return productService.findAll();
 	}
 

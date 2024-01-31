@@ -27,7 +27,7 @@ public class Product {
 	private int prixAchat;
 
 	@ManyToOne
-	@JoinColumn(name = "idCommanf", nullable = false)
+	@JoinColumn(name = "idCommand", nullable = false)
 	private Command command;
 
 }
