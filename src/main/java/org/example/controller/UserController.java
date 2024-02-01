@@ -1,7 +1,7 @@
 package org.example.controller;
 
-import org.example.service.ProductService;
 import org.example.service.UserService;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +16,7 @@ import java.util.Set;
 
 @RestController
 @RequestMapping("/users")
+@CrossOrigin
 public class UserController {
 
 	private final UserService userService;
@@ -24,8 +25,13 @@ public class UserController {
 		this.userService = userService;
 	}
 
+	@GetMapping(value = "/")
+	public Set<User> trouverListUsers() {
+		return userService.findAll();
+	}
+
 	@GetMapping(value = "/authentificate")
-	public User trouverListUserst(@RequestBody User user) {
+	public User login(@RequestBody User user) {
 		return userService.authentificate(user);
 	}
 

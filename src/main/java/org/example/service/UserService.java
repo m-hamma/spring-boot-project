@@ -3,9 +3,7 @@ package org.example.service;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.example.model.Product;
 import org.example.model.User;
-import org.example.repository.ProductRepository;
 import org.example.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
