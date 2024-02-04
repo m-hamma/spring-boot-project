@@ -12,7 +12,6 @@ import java.util.List;
 import java.util.Set;
 
 @RestController
-@RequestMapping("/products")
 public class ProductController {
 
 	private final ProductService productService;
@@ -21,7 +20,7 @@ public class ProductController {
 		this.productService = productService;
 	}
 
-	@GetMapping(value = "/")
+	@GetMapping(value = "api/products")
 	public Set<Product> trouverListProduct() {
 		return productService.findAll();
 	}
