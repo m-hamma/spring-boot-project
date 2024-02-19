@@ -8,6 +8,7 @@ import lombok.Data;
 import org.example.model.Command;
 import org.example.model.User;
 import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 //@JsonFilter("monFiltreDynamique")
 @Entity
@@ -26,8 +27,9 @@ public class Product {
 	// information que nous ne souhaitons pas exposer
 	private int prixAchat;
 
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "idCommand", nullable = false)
+	@JsonIgnore
 	private Command command;
 
 }
