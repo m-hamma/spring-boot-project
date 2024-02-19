@@ -13,7 +13,7 @@ import java.util.List;
 @RequestMapping("/")
 public class CommandController {
 
-	@GetMapping(value = "/commands")
+	@GetMapping(value = "api/commands")
 	public List<Command> trouverListCommands() {
 		return null;
 	}

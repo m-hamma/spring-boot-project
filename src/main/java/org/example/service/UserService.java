@@ -20,10 +20,7 @@ public class UserService {
 		final Iterable<User> itProducts = repository.findAll();
 		// System.out.println("---->"+itProducts.)
 		final Set<User> results = new HashSet<>();
-		// for (Product p : itProducts) {
-		// results.add(p);
-		// }
-		// results = (List<Product>) Arrays.asList(itProducts.iterator());
+
 		itProducts.iterator().forEachRemaining(results::add);
 		return results;
 	}

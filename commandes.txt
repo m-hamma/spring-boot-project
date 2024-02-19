@@ -1,6 +1,13 @@
 mvn -Dmaven.compiler.fork=true -Dmaven.compiler.executable=D:\Outils\j
 dk-17.0.10\javac package
 
+SQL :
+INSERT INTO T_USERS ( CONNECTION_NUMBER , ID_USER , LOGIN , PASSWORD , TOKEN ) VALUES(1,1,'mhamma' ,'Hello',null);
+
+INSERT INTO T_COMMANDS ( COMMAND_DATE , ID_COMMAND ,ID_USER ) VALUES (null,1,1)
+INSERT INTO T_COMMANDS ( COMMAND_DATE , ID_COMMAND ,ID_USER ) VALUES (CURRENT_TIMESTAMP,2,1)
+INSERT INTO T_COMMANDS ( COMMAND_DATE , ID_COMMAND ,ID_USER ) VALUES (CURRENT_TIMESTAMP,3,1)
+
 set JAVA_HOME=D:\Outils\jdk-17.0.10
 
 C:\intellij-workspace1\spring-boot-project>mvn exec:java -Dexec.mainClass="org.example.model.ClassMain"

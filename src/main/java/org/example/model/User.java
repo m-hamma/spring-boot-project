@@ -25,8 +25,8 @@ public class User {
 
 	// Autres attributs
 
-	@OneToMany(targetEntity = Command.class, mappedBy = "user")
-	private List<Command> commands = new ArrayList<>();
+	@OneToMany(targetEntity = Command.class, mappedBy = "user", fetch = FetchType.LAZY)
+	private List<Command> commands;// = new ArrayList<>();
 
 	// Suite de la classe
 
