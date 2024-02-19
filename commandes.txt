@@ -1,0 +1,10 @@
+mvn -Dmaven.compiler.fork=true -Dmaven.compiler.executable=D:\Outils\j
+dk-17.0.10\javac package
+
+set JAVA_HOME=D:\Outils\jdk-17.0.10
+
+C:\intellij-workspace1\spring-boot-project>mvn exec:java -Dexec.mainClass="org.example.model.ClassMain"
+
+
+1. docker build -t java-application:1.0.0 .
+2. docker run -d -p 8080:8080 java-application:1.0.0
